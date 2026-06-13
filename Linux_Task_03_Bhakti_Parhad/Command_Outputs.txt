@@ -1,0 +1,243 @@
+LINUX TASK 03 - SUMMER INTERNSHIP
+
+COMMANDS USED
+
+****************************************************************
+
+PART A - PROCESS MONITORING
+
+1. ps
+Purpose : Displays currently running processes for the current user.
+Command : ps
+Output :
+
+PID TTY          TIME CMD
+4088 pts/0    00:00:00 zsh
+6063 pts/0    00:00:00 ps
+
+---
+
+2. ps aux
+Purpose : Displays detailed information about all running processes.
+Command : ps aux
+Output :
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      1234  0.0  0.2  10000  5000 pts/0    Ss   10:00   0:00 bash
+
+---
+
+3. top
+Purpose : Displays real-time process and resource usage information.
+Command : top
+Output :
+
+Tasks: 250 total, 1 running, 249 sleeping
+%Cpu(s): 5.0 us, 2.0 sy, 93.0 id
+
+---
+
+4. htop
+Purpose : Interactive process viewer showing CPU, memory and process activity.
+Command : htop
+Output :
+
+PID     USER     CPU%     MEM%     COMMAND
+972     root      20      5.3       bash
+
+****************************************************************
+
+PART B - PROCESS MANAGEMENT
+
+1. Create Sleep Process
+Purpose : Creates a process that remains active for 300 seconds.
+Command : sleep 300
+Output : Process started successfully.
+
+---
+
+2. Find Sleep Process
+Purpose : Locates the running sleep process and displays its PID.
+Command : ps aux | grep sleep
+Output :
+
+kali      8370  0.0  0.0   5588   2072 pts/0    S+   19:37   0:00 sleep 300
+
+---
+
+3. Terminate Process
+Purpose : Gracefully terminates the specified process.
+Command : kill PID
+Output : Process terminated successfully.
+
+---
+
+4. Force Terminate Process
+Purpose : Forcefully terminates the specified process.
+Command : kill -9 PID
+Output : Process killed successfully.
+
+****************************************************************
+
+PART C - SYSTEM MONITORING
+
+1. free -h
+Purpose : Displays memory usage in human-readable format.
+Command : free -h
+Output :
+
+total        used        free      shared     buff/cache    available
+3.8Gi        1.2Gi       1.6Gi      34Mi        1.3Gi         2.6Gi
+
+---
+
+2. df -h
+Purpose : Displays disk space usage information.
+Command : df -h
+Output :
+
+Filesystem      Size  Used Avail Use%
+/dev/sda1        79G   16G   59G  22%
+
+---
+
+3. uptime
+Purpose : Displays system uptime and load averages.
+Command : uptime
+Output :
+
+10:25:10 up 2 hours, 15 minutes, 1 user, load average: 0.20, 0.15, 0.10
+
+---
+
+4. uname -a
+Purpose : Displays kernel and system information.
+Command : uname -a
+Output :
+
+Linux kali 6.x.x-amd64 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux
+
+****************************************************************
+
+PART D - SERVICE MONITORING
+
+1. Check SSH Service Status
+Purpose : Displays the status of the SSH service.
+Command : systemctl status ssh
+Output : Active: inactive (dead)
+
+---
+
+2. Check NetworkManager Service Status
+
+Purpose : Displays the status of the NetworkManager service.
+Command : systemctl status NetworkManager
+Output : Active: active (running)
+
+****************************************************************
+
+PART E - SHELL SCRIPTING
+
+1. Create Script File
+Purpose : Creates a shell script file.
+Command : nano system_report.sh
+Output : Script file created successfully.
+
+---
+
+2. Make Script Executable
+Purpose : Grants execute permission to the script.
+Command : chmod +x system_report.sh
+Output : Permission changed successfully.
+
+---
+
+3. Execute Script
+Purpose : Runs the shell script.
+Command : ./system_report.sh
+Output :
+
+System Information Report
+
+User: kali
+Hostname: kali
+Date: Thu Jun 11 10:30:15 IST 2026
+Current Directory: /home/kali
+
+Memory Usage :
+3.8Gi Total RAM
+
+Disk Usage :
+32% Used
+
+****************************************************************
+
+PART F - SECURITY MONITORING COMMANDS
+
+1. netstat
+Purpose : Displays network connections, routing tables and listening ports.
+Command : netstat
+Output :
+
+tcp        0      0 127.0.0.1:631      0.0.0.0:*      LISTEN
+
+---
+
+2. ss
+Purpose : Displays socket and network connection information.
+Command : ss
+Output :
+
+Netid State  Recv-Q Send-Q Local Address:Port
+tcp   LISTEN 0      128    127.0.0.1:631
+
+---
+
+3. who
+Purpose : Displays currently logged-in users.
+Command : who
+Output : kali pts/0 2026-06-12 10:00
+
+---
+
+4. w
+Purpose : Displays logged-in users and their current activities.
+Command : w
+Output :
+
+USER   TTY   FROM      LOGIN@   IDLE
+kali   pts/0 localhost 10:00    1:00
+
+---
+
+5. last
+Purpose : Displays login history of users.
+Command : last
+Output : kali tty7 :0 Fri Jun 12 19:27 - still logged in
+
+****************************************************************
+
+SUMMARY OF IMPORTANT COMMANDS :
+
+ps                    : Displays running processes
+ps aux                : Displays detailed process information
+top                   : Displays real-time process activity
+htop                  : Interactive process monitoring tool
+sleep                 : Creates a temporary process
+kill                  : Terminates a process
+kill -9               : Forcefully terminates a process
+free -h               : Displays memory usage
+df -h                 : Displays disk usage
+uptime                : Displays system uptime
+uname -a              : Displays kernel information
+systemctl status      : Displays service status
+nano                  : Creates and edits files
+chmod +x              : Makes scripts executable
+netstat               : Displays network connections
+ss                    : Displays socket statistics
+who                   : Displays logged-in users
+w                     : Displays user activity
+last                  : Displays login history
+
+****************************************************************
+

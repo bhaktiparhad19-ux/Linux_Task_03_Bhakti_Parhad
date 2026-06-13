@@ -1,0 +1,154 @@
+LINUX TASK 03 - SUMMER INTERNSHIP
+
+PART C - SYSTEM MONITORING (SYSTEM REPORT)
+
+****************************************************************
+
+System Monitoring Basics : System Monitoring is the process of observing and analyzing the performance, health and resource usage of a Linux system.
+It helps administrators and security analysts understand system activity, identify performance issues and detect potential problems.
+
+Benefits of System Monitoring :
+
+* Tracks system performance
+* Monitors memory usage
+* Monitors disk usage
+* Checks system uptime
+* Identifies resource bottlenecks
+* Assists in troubleshooting
+
+****************************************************************
+
+TASK OBJECTIVE : Monitor system resources and collect important system information using Linux monitoring commands.
+
+Commands Used :
+free -h
+df -h
+uptime
+uname -a
+
+****************************************************************
+
+SYSTEM MONITORING COMMANDS :
+
+free -h
+Purpose : Displays memory usage information in a human-readable format.
+Information Provided :
+
+* Total RAM
+* Used RAM
+* Free RAM
+* Available RAM
+* Swap Memory
+
+---
+
+df -h
+Purpose : Displays disk space usage information in a human-readable format.
+Information Provided :
+
+* Filesystem Name
+* Total Disk Space
+* Used Space
+* Available Space
+* Usage Percentage
+
+---
+
+uptime
+Purpose : Displays how long the system has been running since the last boot.
+Information Provided :
+
+* Current Time
+* System Uptime
+* Number of Logged-in Users
+* Load Average
+
+---
+
+uname -a
+Purpose : Displays detailed system and kernel information.
+Information Provided :
+
+* Operating System
+* Hostname
+* Kernel Version
+* System Architecture
+
+****************************************************************
+
+SYSTEM SUMMARY REPORT :
+
+Total RAM : 3.8 GiB
+
+Available RAM : 2.6 GiB
+
+Disk Usage : 16G Used of 79G (22%)
+
+System Uptime : 10 Minutes
+
+Kernel Version : kali 6.x.x
+
+****************************************************************
+
+COMMAND EXPLANATION :
+
+free -h
+Purpose : Displays memory statistics in a human-readable format.
+Example Output :
+
+total        used        free      shared    buff/cache   available
+3.8Gi        1.2Gi       1.6Gi      34Mi        1.3Gi       2.6Gi
+
+Use Case : Used to monitor RAM utilization and available memory resources.
+
+---
+
+df -h
+Purpose : Displays filesystem disk usage information.
+Example Output :
+
+Filesystem      Size   Used   Avail   Use%
+/dev/sda1        79G    16G     59G    22%
+
+Use Case : Used to monitor storage utilization and available disk space.
+
+---
+
+uptime
+Purpose : Displays system running time and load averages.
+Example Output :
+
+20:38:03 up 10 min, 1 user, load average: 0.28, 0.41, 0.24
+
+Use Case : Used to determine system stability and workload.
+
+---
+
+uname -a
+Purpose : Displays complete system and kernel information.
+Example Output :
+
+Linux kali 6.x.x-amd64 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux
+
+Use Case : Used to identify operating system details and kernel version.
+
+****************************************************************
+
+SYSTEM MONITORING SUMMARY :
+
+Commands Used :
+* free -h
+* df -h
+* uptime
+* uname -a
+
+Information Collected :
+* Memory Usage
+* Disk Usage
+* System Uptime
+* Kernel Version
+* System Information
+
+Use Case : System Monitoring helps Linux Administrators and Security Analysts monitor system health, identify performance issues and maintain stable system operation.
+
+****************************************************************

@@ -1,0 +1,282 @@
+LINUX TASK 03 - SUMMER INTERNSHIP
+
+RESEARCH ANSWERS
+
+****************************************************************
+
+PART A - PROCESS MONITORING
+
+What is a Process?
+A Process is a program that is currently running on a computer. Every application, command or service running in Linux executes as a process.
+
+Examples :
+* Firefox Browser
+* Terminal
+* SSH Service
+* Sleep Command
+
+---
+
+What is a PID?
+PID stands for Process Identifier.
+A PID is a unique number assigned by the operating system to every running process. It helps Linux identify and manage individual processes.
+
+Example :
+PID 1001 = Firefox
+PID 1200 = Terminal
+PID 1500 = SSH Service
+
+---
+
+Which Process is Consuming the Most CPU?
+This information can be identified using the top or htop command. The process shown at the top of the CPU usage column is consuming the most CPU resources.
+
+Example : firefox-esr using 35% CPU
+
+Note : Replace this example with the actual process from your screenshot.
+
+---
+
+Which Process is Consuming the Most Memory?
+This information can be identified using the top or htop command. The process shown at the top of the Memory usage column is consuming the most RAM.
+
+Example : firefox-esr using 18% Memory
+
+Note : Replace this example with the actual process from your screenshot.
+
+****************************************************************
+
+PART B - PROCESS MANAGEMENT
+
+What is Process Management?
+Process Management is the activity of monitoring, controlling, starting and stopping processes running on a Linux system. It helps administrators manage system performance and resource utilization.
+
+---
+
+Why is it Important to Terminate Unnecessary Processes?
+Unnecessary processes consume CPU, memory and system resources. Terminating unused processes helps improve system performance and stability.
+
+---
+
+Difference Between kill and kill -9 
+
+kill PID
+Purpose : Sends a SIGTERM signal requesting the process to terminate
+gracefully.
+
+---
+
+kill -9 PID
+Purpose : Sends a SIGKILL signal and forcefully stops the process.
+
+Note : kill -9 should only be used when a process does not respond
+to a normal kill command.
+
+****************************************************************
+
+PART C - SYSTEM MONITORING
+
+What is System Monitoring?
+System Monitoring is the process of observing and analyzing system performance, resource utilization and overall health.
+
+---
+
+Why is System Monitoring Important?
+
+* Detects performance issues
+* Tracks CPU and memory usage
+* Monitors disk utilization
+* Helps identify system bottlenecks
+* Assists in troubleshooting
+
+---
+
+Information Collected During Monitoring
+
+Total RAM : Total physical memory installed on the system.
+
+---
+
+Available RAM : Memory currently available for applications and processes.
+
+---
+
+Disk Usage : Amount of storage currently used and available.
+
+---
+
+System Uptime : Length of time the system has been running since the last reboot.
+
+---
+
+Kernel Version : Version of the Linux kernel currently running on the system.
+
+****************************************************************
+
+PART D - SERVICE MONITORING
+
+What is a Service?
+A Service is a background program that performs specific tasks without direct user interaction. Services usually start automatically during system boot.
+
+Examples :
+* SSH Service
+* NetworkManager
+* Bluetooth Service
+* Printing Service
+
+---
+
+Why are Services Important?
+Services provide essential functionality required for system operation.
+Examples :
+* Remote access through SSH
+* Network connectivity
+* File sharing
+* Printing
+* Database operations
+
+---
+
+How Can a Stopped Service Affect a System?
+When a service stops, the functionality provided by that service becomes unavailable.
+
+Examples :
+* Stopped SSH service prevents remote login.
+* Stopped NetworkManager service may disable network connectivity.
+* Stopped web server makes websites inaccessible.
+
+****************************************************************
+
+PART E - SHELL SCRIPTING
+
+What is a Shell Script?
+A Shell Script is a text file containing a sequence of Linux commands executed automatically by the shell.
+
+---
+
+Why are Shell Scripts Useful?
+* Automate repetitive tasks
+* Save time and effort
+* Reduce human errors
+* Simplify system administration
+* Execute multiple commands automatically
+
+---
+
+What Does system_report.sh Do?
+The system_report.sh script collects and displays important system information including :
+
+* Current User
+* Hostname
+* Date and Time
+* Current Directory
+* Memory Usage
+* Disk Usage
+
+****************************************************************
+
+PART F - SECURITY MONITORING CHALLENGE
+
+1. netstat
+Purpose : Displays network connections, routing tables and listening ports.
+
+Example Output :
+
+tcp   0   0   127.0.0.1:631   0.0.0.0:*   LISTEN
+
+Security Use Case : Used to identify open ports and suspicious network connections.
+
+---
+
+2. ss
+Purpose : Displays socket statistics and network connections.
+
+Example Output :
+
+tcp LISTEN 0 128 127.0.0.1:631
+
+Security Use Case : Used to investigate active connections and network activity.
+
+---
+
+3. who
+Purpose : Displays currently logged-in users.
+
+Example Output :
+
+kali pts/0 2026-06-12 10:00
+
+Security Use Case : Used to identify users currently accessing the system.
+
+---
+
+4. w
+Purpose : Displays logged-in users and their current activities.
+
+Example Output :
+
+USER TTY FROM LOGIN@ IDLE
+kali pts/0 localhost 10:00 1:00
+
+Security Use Case : Used to monitor user activity and detect unusual sessions.
+
+---
+
+5. last
+Purpose : Displays login history of users.
+
+Example Output :
+
+kali pts/0 localhost Fri Jun 12 10:00 still logged in
+
+Security Use Case : Used to investigate login history and identify unauthorized access.
+
+****************************************************************
+
+PART G - MINI SOC ACTIVITY
+
+How Would You Identify Resource-Heavy Processes?
+I would use commands such as top, htop and ps aux to monitor running processes and check CPU and memory utilization. Processes consuming unusually high resources would be investigated further because they may affect system performance.
+
+---
+
+How Would You Determine Whether a Process is Suspicious?
+I would examine the process name, PID, owner, resource usage, execution path and behavior. Processes with unusual names, unknown origins or unexpected activity may be considered suspicious and require investigation.
+
+---
+
+What Information Would You Collect Before Terminating a Process?
+Before terminating a process, I would collect :
+* Process Name
+* Process ID (PID)
+* User Running the Process
+* CPU Usage
+* Memory Usage
+* Process Start Time
+* Command Path
+
+Collecting this information helps determine whether the process is legitimate and provides evidence for troubleshooting or
+security investigations.
+
+****************************************************************
+
+RESEARCH SUMMARY :
+
+Topics Covered :
+
+* Process Monitoring
+* Process Management
+* System Monitoring
+* Service Monitoring
+* Shell Scripting
+* Security Monitoring
+* SOC Analysis Fundamentals
+
+Learning Outcome :
+
+This task helped in understanding Linux process management,
+resource monitoring, service management, shell scripting and
+basic security analysis techniques used by Linux Administrators
+and SOC Analysts.
+
+****************************************************************

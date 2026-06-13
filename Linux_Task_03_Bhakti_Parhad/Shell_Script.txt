@@ -1,0 +1,176 @@
+LINUX TASK 03 - SUMMER INTERNSHIP
+
+PART E - SHELL SCRIPTING
+
+****************************************************************
+
+Shell Scripting Basics : A Shell Script is a text file that contains a sequence of Linux commands. These commands are executed automatically by the shell.
+Shell scripts help automate repetitive tasks and reduce manual work.
+
+Benefits of Shell Scripting :
+
+* Automates routine tasks
+* Saves time and effort
+* Reduces human errors
+* Improves system administration
+* Executes multiple commands at once
+
+****************************************************************
+
+TASK OBJECTIVE : Create a shell script named : system_report.sh
+
+The script should display :
+
+* Current User
+* Hostname
+* Date and Time
+* Current Directory
+* Available Memory
+* Disk Usage
+
+****************************************************************
+
+SCRIPT CONTENT :
+
+#!/bin/bash
+
+echo "=============================="
+echo "   System Information Report"
+echo "=============================="
+
+echo "User: $(whoami)"
+echo "Hostname: $(hostname)"
+echo "Date: $(date)"
+echo "Current Directory: $(pwd)"
+
+echo ""
+echo "Memory Usage:"
+free -h
+
+echo ""
+echo "Disk Usage:"
+df -h /
+
+****************************************************************
+
+SCRIPT CREATION PROCESS :
+
+Step 1 : Create the script file.
+Command : nano system_report.sh
+
+Step 2 : Paste the script content into the file.
+
+Step 3 : Save the file.
+Ctrl + O
+Press Enter
+
+Step 4 : Exit Nano Editor.
+Ctrl + X
+
+****************************************************************
+
+MAKE THE SCRIPT EXECUTABLE :
+
+Command : chmod +x system_report.sh
+Purpose : Adds execute permission so the script can be run as a program.
+
+****************************************************************
+
+EXECUTE THE SCRIPT :
+
+Command : ./system_report.sh
+Purpose : Runs the shell script and displays the system report.
+
+****************************************************************
+
+EXAMPLE OUTPUT :
+
+==============================
+System Information Report
+=========================
+
+User: kali
+
+Hostname: kali
+
+Date: Thu Jun 11 10:30:15 IST 2026
+
+Current Directory: /home/kali
+
+Memory Usage:
+
+Total Memory : 3.8 GiB
+Used Memory  : 1.5 GiB
+Free Memory  : 2.3 GiB
+
+Disk Usage :
+
+Filesystem : /
+Used Space : 15G
+Available  : 30G
+
+****************************************************************
+
+COMMAND EXPLANATION :
+
+whoami
+Purpose : Displays the currently logged-in user.
+Example : kali
+
+---
+
+hostname
+Purpose : Displays the system hostname.
+Example : kali
+
+---
+
+date
+Purpose : Displays the current date and time.
+Example : Thu Jun 11 10:30:15 IST 2026
+
+---
+
+pwd
+Purpose : Displays the current working directory.
+Example : /home/kali
+
+---
+
+free -h
+Purpose : Displays memory usage in a human-readable format.
+Information Provided :
+
+* Total RAM
+* Used RAM
+* Free RAM
+* Available RAM
+
+---
+
+df -h 
+Purpose : Displays disk usage information for the root filesystem.
+Information Provided :
+
+* Total Disk Space
+* Used Space
+* Available Space
+* Usage Percentage
+
+****************************************************************
+
+SHELL SCRIPT SUMMARY :
+
+Script Name : system_report.sh
+Functions Performed :
+
+* Displays current user
+* Displays hostname
+* Displays date and time
+* Displays current directory
+* Displays memory usage
+* Displays disk usage
+
+Use Case : Used by Linux Administrators and Security Analysts to quickly collect important system information from a Linux machine.
+
+****************************************************************
