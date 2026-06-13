@@ -70,11 +70,11 @@ PID stands for Process Identifier. It is a unique number assigned by the operati
 
 ### Which Process is Consuming the Most CPU?
 
-Refer to the top or htop screenshot and record the process showing the highest CPU usage.
+The process consuming the most CPU was **Xorg (PID 972)** running under the **root** user.
 
 ### Which Process is Consuming the Most Memory?
 
-Refer to the top or htop screenshot and record the process showing the highest Memory usage.
+The process consuming the most Memory was **Xorg (PID 972)** running under the **root** user.
 
 ---
 
@@ -128,12 +128,14 @@ kill -9 PID
 
 ### PID Found
 
-Record the PID from your screenshot.
+kill PID : 8370
+kill -9 PID : 8848
 
 ### Command Used
 
 ```bash
 kill PID
+kill -9 PID
 ```
 
 ### Result
@@ -188,23 +190,23 @@ Displays kernel and operating system information.
 
 ### Total RAM
 
-Record value from free -h output.
+3.8 GiB
 
 ### Available RAM
 
-Record value from free -h output.
+2.6 GiB
 
 ### Disk Usage
 
-Record value from df -h output.
+16G Used of 79G (22%)
 
 ### System Uptime
 
-Record value from uptime output.
+10 minutes
 
 ### Kernel Version
 
-Record value from uname -a output.
+kali 6.x.x
 
 ---
 
