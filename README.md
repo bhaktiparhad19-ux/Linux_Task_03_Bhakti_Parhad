@@ -70,11 +70,11 @@ PID stands for Process Identifier. It is a unique number assigned by the operati
 
 ### Which Process is Consuming the Most CPU?
 
-The process consuming the most CPU was **Xorg (PID 972)** running under the **root** user.
+The process consuming the most CPU was **PID 972** running under the **root** user.
 
 ### Which Process is Consuming the Most Memory?
 
-The process consuming the most Memory was **Xorg (PID 972)** running under the **root** user.
+The process consuming the most Memory was **PID 972** running under the **root** user.
 
 ---
 
@@ -327,10 +327,6 @@ Displays network connections, routing tables and listening ports.
 
 Used to identify suspicious connections and open ports.
 
-#### Screenshot
-
-![netstat](Linux_Task_03_Bhakti_Parhad/Screenshots_linux_03/netstat.png)
-
 ---
 
 ## 2. ss
@@ -342,10 +338,6 @@ Displays socket and network connection information.
 ### Security Use Case
 
 Used to investigate active network connections.
-
-#### Screenshot
-
-![ss](Linux_Task_03_Bhakti_Parhad/Screenshots_linux_03/ss.png)
 
 ---
 
@@ -371,10 +363,6 @@ Displays logged-in users and their activities.
 
 Used to monitor user activity.
 
-#### Screenshot
-
-![who\_w](Linux_Task_03_Bhakti_Parhad/Screenshots_linux_03/who_w.png)
-
 ---
 
 ## 5. last
@@ -386,10 +374,6 @@ Displays login history.
 ### Security Use Case
 
 Used to investigate previous login activity.
-
-#### Screenshot
-
-![last](Linux_Task_03_Bhakti_Parhad/Screenshots_linux_03/last.png)
 
 ---
 
