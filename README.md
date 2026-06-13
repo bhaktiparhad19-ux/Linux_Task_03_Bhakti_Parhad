@@ -6,7 +6,7 @@
 
 **Internship:** White Band Associates Summer Internship Cyber Security
 
-**Task:** Linux Task 02 - Users, Groups & File Permissions
+**Task:** Linux Task 03 - Process Management, System Monitoring & Basic Shell Scripting
 
 ## Objective
 
@@ -95,12 +95,6 @@ Command:
 ```bash
 ps aux | grep sleep
 ```
-
-#### Screenshot
-
-![ps\_aux](Linux_Task_03_Bhakti_Parhad/Screenshots_linux_03/ps_aux.png)
-
----
 
 ## Terminate Process
 
